@@ -1,0 +1,9 @@
+:root {
+  --habbo-default-font-color: #FFF;
+
+  --habbo-overlay-bg-color: #082744;
+
+  --habbo-splash-background: #1F2024;
+
+  --habbo-page-background: linear-gradient(180deg, #0C5A7F 0%, #0C3A65 100%);;
+}
