@@ -26,6 +26,16 @@ namespace Habbo.Users {
       networkPort = value;
     }
 
+    private string authKey = "";
+
+    private string GetAuthKey() {
+      return authKey;
+    }
+
+    private void SetAuthKey(string value) {
+      authKey = value;
+    }
+
     public SocketUser(string ipPort) {
       string[] networkData = ipPort.Split(':');
 

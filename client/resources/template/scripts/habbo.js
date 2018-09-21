@@ -31,13 +31,19 @@ $(function(){
 
       $(".habbo-overlay").fadeOut(900, function(){
         $("[-form-data=login]").submit(function(){
-          var username = $("[-form-data=login] [-form-data=username]").val();
-          var password = $("[-form-data=login] [-form-data=password]").val();
+          var username = $("[-form-data=login] [-form-data=username] input").val();
+          var password = $("[-form-data=login] [-form-data=password] input").val();
 
-          console.log("AuthenticateCredentialsEvent > Authenticating login credentials per `" + username + "`...");
+          $("[-form-data=login] div input").each(function(){
+            if($(this).val() == "")
+              $(this).removeClass("habbo-form-input-blue").addClass("habbo-form-input-red").siblings("label").text(data.index["FORM_ERROR_EMPTY"]).show();
+            else
+              $(this).removeClass("habbo-form-input-red").addClass("habbo-form-input-blue").siblings("label").hide();
+          });
+          
           
           socket.send(JSON.stringify({
-            Event: "AuthenticateCredentialsEvent",
+            Event: "GetAuthKeyEvent", 
             Username: username,
             Password: password
           }));
@@ -59,11 +65,19 @@ $(function(){
       console.log("Received socket message from the server with header `" + response.Event + "`...");
 
       switch(response.Event) {
-        case "AuthenticateCredentialsEvent":
+        case "GetAuthKeyEvent":
           
-          switch(response.Response) {
+          switch(response.code) {
             case 1:
               alert("OK");
+              break;
+
+            case 2:
+              alert("username doesnt exist");
+              break;
+
+            case 3:
+              alert("credentials are wrong");
               break;
           }
 
