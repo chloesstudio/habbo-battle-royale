@@ -1,0 +1,10 @@
+D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\server.exe.config
+D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\server.exe
+D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\server.pdb
+D:\Habbo-Hotel\habbo-battle-royale\server\server\obj\Debug\server.csprojAssemblyReference.cache
+D:\Habbo-Hotel\habbo-battle-royale\server\server\obj\Debug\server.csproj.CoreCompileInputs.cache
+D:\Habbo-Hotel\habbo-battle-royale\server\server\obj\Debug\server.exe
+D:\Habbo-Hotel\habbo-battle-royale\server\server\obj\Debug\server.pdb
+D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\WatsonWebsocket.dll
+D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\WatsonWebsocket.pdb
+D:\Habbo-Hotel\habbo-battle-royale\server\server\obj\Debug\server.csproj.CopyComplete
