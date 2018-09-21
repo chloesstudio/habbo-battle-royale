@@ -5,8 +5,8 @@ Habbo Battle Royale is a (in-development) web-based virtual-world multiplayer ga
 ## Built With
 
 * [WatsonWebsocket](https://github.com/jchristn/WatsonWebsocket/) - A simple C# async websocket server and client for reliable transmission and receipt of data.
+* [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json/) - Json.NET is a popular high-performance JSON framework for .NET
 
 ## Credits
 
-* **Noel** - *Project Developer* - [HamiltonDev](https://github.com/HamiltonDev)
 * **Francis Joseph** - *Battle Royale UI concept* - [Francis Joseph](https://devbest.com/members/francisjoseph.42561/)
