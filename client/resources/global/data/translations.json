@@ -7,7 +7,7 @@
     "FORM_PASSWORD": "Password",
     "FORM_SUBMIT": "Let's go!",
 
-    "FORM_ERROR_EMPTY": "This field is required!",
+    "FORM_ERROR_REQUIRED": "This field is required!",
 
     "LINK_REGISTER": "I'm new here, I want to register!",
     "LINK_RESET_PASSWORD": "I've forgotten my username or password!"

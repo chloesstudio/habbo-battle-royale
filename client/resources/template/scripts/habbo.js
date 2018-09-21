@@ -36,7 +36,7 @@ $(function(){
 
           $("[-form-data=login] div input").each(function(){
             if($(this).val() == "")
-              $(this).removeClass("habbo-form-input-blue").addClass("habbo-form-input-red").siblings("label").text(data.index["FORM_ERROR_EMPTY"]).show();
+              $(this).removeClass("habbo-form-input-blue").addClass("habbo-form-input-red").siblings("label").text(data.index["FORM_ERROR_REQUIRED"]).show();
             else
               $(this).removeClass("habbo-form-input-red").addClass("habbo-form-input-blue").siblings("label").hide();
           });
