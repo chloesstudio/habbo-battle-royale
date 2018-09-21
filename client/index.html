@@ -49,14 +49,14 @@
 
             <form -form-data="login" method="post">
               <div class="habbo-form-input">
-                <input -form-data="username" class="habbo-form-input-1 habbo-form-input-red page-input" type="text" placeholder="FORM_USERNAME" autofocus>
+                <input -form-data="username" class="habbo-form-input-1 habbo-form-input-red page-input" type="text" placeholder="FORM_USERNAME" autocomplete="username" autofocus>
 
                 <label class="habbo-form-error-1" style="display: none">FORM_USERNAME_ERROR</label>
               </div>
 
               <div class="page-break" style="height: 12px"></div>
 
-              <input -form-data="password" class="habbo-form-input-1 habbo-form-input-blue page-input" type="password" placeholder="FORM_PASSWORD">
+              <input -form-data="password" class="habbo-form-input-1 habbo-form-input-blue page-input" type="password" placeholder="FORM_PASSWORD" autocomplete="password">
 
               <div class="page-break" style="height: 12px"></div>
 
@@ -81,6 +81,8 @@
   
     <script type="text/javascript" src="/resources/global/scripts/libs/jquery-3.1.1.min.js"></script>
 
+    <script type="text/javascript" src="/resources/global/scripts/habbo-cookies.js"></script>
+    
     <script type="text/javascript" src="/resources/template/scripts/habbo.js"></script>
   </div>
 </html>

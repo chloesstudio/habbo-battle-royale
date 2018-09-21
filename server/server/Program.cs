@@ -27,7 +27,6 @@ namespace Habbo {
 
         Console.ResetColor();
       }
-      
 
       while(true)
         Console.ReadLine();

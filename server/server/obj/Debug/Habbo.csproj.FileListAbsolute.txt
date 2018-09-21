@@ -7,3 +7,6 @@ D:\Habbo-Hotel\habbo-battle-royale\server\server\obj\Debug\Habbo.csproj.CoreComp
 D:\Habbo-Hotel\habbo-battle-royale\server\server\obj\Debug\Habbo.csproj.CopyComplete
 D:\Habbo-Hotel\habbo-battle-royale\server\server\obj\Debug\server.exe
 D:\Habbo-Hotel\habbo-battle-royale\server\server\obj\Debug\server.pdb
+D:\Habbo-Hotel\habbo-battle-royale\server\server\obj\Debug\Habbo.csprojAssemblyReference.cache
+D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\Newtonsoft.Json.dll
+D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\Newtonsoft.Json.xml

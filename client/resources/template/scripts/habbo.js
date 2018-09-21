@@ -1,4 +1,8 @@
 $(function(){
+  if(getCookie("auth_key") != "") {
+    window.location.replace("/lobby");
+  }
+
   console.log("  _    _       _     _             ____        _   _   _        _____                   _      "             + "\n" +
               " | |  | |     | |   | |           |  _ \\      | | | | | |      |  __ \\                 | |     "           + "\n" +
               " | |__| | __ _| |__ | |__   ___   | |_) | __ _| |_| |_| | ___  | |__) |___  _   _  __ _| | ___ "             + "\n" +
@@ -24,8 +28,6 @@ $(function(){
       });
     
       $(".habbo-index").html(_html);
-
-      console.log("Replaced all of (" + data.index.Count + ") strings for the index.");
 
       $(".habbo-overlay").fadeOut(900, function(){
         $("[-form-data=login]").submit(function(){
@@ -67,8 +69,8 @@ $(function(){
 
           break;
 
-        case "OnlineCountEvent":
-          $(".habbo-index").html($(".habbo-index").html().replace("${ONLINE_COUNT}", response.Count, -1));
+        case "GetOnlineCountEvent":
+          $(".habbo-index").html($(".habbo-index").html().replace("${ONLINE_COUNT}", response.count, -1));
           break;
       }
     });
