@@ -1,0 +1,15 @@
+.habbo-overlay {
+  background-color: var(--habbo-overlay-bg-color);
+}
+
+.habbo-overlay .overlay-logo {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: 0;
+  bottom: 0;
+
+  margin: auto;
+}

@@ -1,0 +1,13 @@
+{
+  "index": {
+    "BOX_SPLASH_TEXT": "Fight to be the last survivor in the island of Habbo Battle Royale!",
+    "BOX_ONLINE_COUNT": "There's currently ${ONLINE_COUNT} fighters at battle, join them!",
+
+    "FORM_USERNAME": "Username",
+    "FORM_PASSWORD": "Password",
+    "FORM_SUBMIT": "Let's go!",
+
+    "LINK_REGISTER": "I'm new here, I want to register!",
+    "LINK_RESET_PASSWORD": "I've forgotten my username or password!"
+  }
+}
