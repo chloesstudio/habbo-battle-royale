@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace Habbo.Socket {
   internal class SocketEvent {
-    public string Event { get; }
+    public string Event { get; set; }
   }
 
   internal class SocketEvents {
@@ -18,6 +18,10 @@ namespace Habbo.Socket {
       switch(data.Event) {
         case "GetOnlineCount":
           new Events.GetOnlineCountEvent(client);
+          break;
+
+        case "GetAuthKey":
+          new Events.GetAuthKeyEvent(client, message);
           break;
 
         default:

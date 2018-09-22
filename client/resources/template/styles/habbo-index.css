@@ -3,7 +3,7 @@
 }
 
 .habbo-index .index-splash {
-  background: url(/resources/template/images/splash-screen.png) center, var(--habbo-splash-background);
+  background: var(--habbo-splash-background-overlay), url(/resources/template/images/splash-screen.png) center, var(--habbo-splash-background);
 
   background-size: cover;
 

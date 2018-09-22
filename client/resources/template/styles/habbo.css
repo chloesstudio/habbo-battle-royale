@@ -192,3 +192,7 @@
 .habbo-link-blue:hover {
   border-bottom: 2px solid #4888DB;
 }
+
+habbo-online-count {
+  display: inline-block;
+}

@@ -5,5 +5,7 @@
 
   --habbo-splash-background: #1F2024;
 
-  --habbo-page-background: linear-gradient(180deg, #0C5A7F 0%, #0C3A65 100%);;
+  --habbo-page-background: linear-gradient(180deg, #0C5A7F 0%, #0C3A65 100%);
+
+  --habbo-splash-background-overlay: linear-gradient(to bottom right, rgba(12, 90, 127, .4) 0%, rgba(0, 0, 0, .25) 75%);
 }

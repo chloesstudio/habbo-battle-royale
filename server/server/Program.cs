@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SQLite;
 
 namespace Habbo {
   internal class Program {
+    public static readonly string ConnectionString = "Data Source=storage.db;Version=3;";
+
     private static void Main(string[] args) {
       Console.Title = "Habbo Battle Royale Server";
 

@@ -15,12 +15,16 @@ $(function(){
   console.log("Connecting to the web socket server at `127.0.0.1:7777`...");
 
   var socket = new WebSocket("ws://127.0.0.1:7777");
+
+  var translation;
   
   socket.onopen = function(event){
     console.log("Connected to the web socket server after " + Math.round(event.timeStamp) + "ms!");
     console.log(" ");
 
     $.getJSON("/resources/global/data/translations.json", function(data) {
+      translation = data;
+
       var _html = $(".habbo-index").html();
 
       $.each(data.index, function(key, value) {
@@ -35,22 +39,26 @@ $(function(){
           var password = $("[-form-data=login] [-form-data=password] input").val();
 
           $("[-form-data=login] div input").each(function(){
-            if($(this).val() == "")
-              $(this).removeClass("habbo-form-input-blue").addClass("habbo-form-input-red").siblings("label").text(data.index["FORM_ERROR_REQUIRED"]).show();
+            if($(this).val() == "") {
+              $(this).removeClass("habbo-form-input-blue").addClass("habbo-form-input-red").siblings("label").text(data.index["FORM_ERROR_REQUIRED"]).show(function(){
+
+                $(this).siblings("input").effect("shake");
+              });
+            }
             else
               $(this).removeClass("habbo-form-input-red").addClass("habbo-form-input-blue").siblings("label").hide();
           });
           
           
           socket.send(JSON.stringify({
-            Event: "GetAuthKeyEvent", 
+            Event: "GetAuthKey", 
             Username: username,
             Password: password
           }));
 
           return false;
         });
-      });
+      }); 
     });
   };
 
@@ -64,27 +72,27 @@ $(function(){
 
       console.log("Received socket message from the server with header `" + response.Event + "`...");
 
+      console.log(response);
+
       switch(response.Event) {
         case "GetAuthKeyEvent":
           
-          switch(response.code) {
+          switch(response.Code) {
             case 1:
               alert("OK");
               break;
 
-            case 2:
-              alert("username doesnt exist");
-              break;
-
-            case 3:
-              alert("credentials are wrong");
+            case 2: // error occured
+              $("[-form-data=login] [-form-data=" + response.Inputfield + "] input").removeClass("habbo-form-input-blue").addClass("habbo-form-input-red").siblings("label").text(translation.index[response.Error]).show(function(){
+                $("[-form-data=login] [-form-data=" + response.Inputfield + "] input").effect("shake");
+              });
               break;
           }
 
           break;
 
         case "GetOnlineCountEvent":
-          $(".habbo-index").html($(".habbo-index").html().replace("${ONLINE_COUNT}", response.count, -1));
+          $("habbo-online-count").text(response.count);
           break;
       }
     });

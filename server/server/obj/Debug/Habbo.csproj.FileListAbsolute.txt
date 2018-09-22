@@ -10,3 +10,12 @@ D:\Habbo-Hotel\habbo-battle-royale\server\server\obj\Debug\server.pdb
 D:\Habbo-Hotel\habbo-battle-royale\server\server\obj\Debug\Habbo.csprojAssemblyReference.cache
 D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\Newtonsoft.Json.dll
 D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\Newtonsoft.Json.xml
+D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\EntityFramework.dll
+D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\EntityFramework.SqlServer.dll
+D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\System.Data.SQLite.dll
+D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\EntityFramework.xml
+D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\EntityFramework.SqlServer.xml
+D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\System.Data.SQLite.xml
+D:\Habbo-Hotel\habbo-battle-royale\server\server\bin\Debug\System.Data.SQLite.dll.config
