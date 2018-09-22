@@ -6,6 +6,7 @@ Habbo Battle Royale is a (in-development) web-based virtual-world multiplayer ga
 
 * [WatsonWebsocket](https://github.com/jchristn/WatsonWebsocket/) - A simple C# async websocket server and client for reliable transmission and receipt of data.
 * [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json/) - Json.NET is a popular high-performance JSON framework for .NET
+* [System.Data.SQLite](https://system.data.sqlite.org/) - System.Data.SQLite is an ADO.NET provider for SQLite.
 
 ## Credits
 
