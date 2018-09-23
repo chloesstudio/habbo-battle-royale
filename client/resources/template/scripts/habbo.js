@@ -1,5 +1,5 @@
 $(function(){
-  if(getCookie("auth_key") != "") {
+  if(getCookie("authKey") != "") {
     window.location.replace("/lobby");
   }
 
@@ -58,6 +58,16 @@ $(function(){
 
           return false;
         });
+
+        $("[-link-data]").each(function(){
+          $(this).click(function(){
+            var redirection = "/" + $(this).attr("-link-data");
+            
+            $(".habbo-overlay").fadeIn(900, function(){
+              window.location.replace(redirection);
+            });
+          });
+        });
       }); 
     });
   };
@@ -79,7 +89,11 @@ $(function(){
           
           switch(response.Code) {
             case 1:
-              alert("OK");
+              setCookie("authKey", response.AuthKey, 7);
+              
+              $(".habbo-overlay").fadeIn(900, function(){
+                window.location.replace("/lobby");
+              });
               break;
 
             case 2: // error occured

@@ -77,6 +77,22 @@ namespace Habbo.Socket.Events {
 
           return;
         }
+
+        int id = Convert.ToInt32(reader["id"]);
+
+        reader.Close();
+
+        string authKey = Convert.ToString(Guid.NewGuid());
+
+        command = new SQLiteCommand("UPDATE `users` SET `authKey` = @authKey WHERE `id` = @id", connection);
+        command.Parameters.AddWithValue("@id", id);
+        command.Parameters.AddWithValue("@authKey", authKey);
+
+        command.ExecuteNonQuery();
+
+        connection.Close();
+
+        WebSocket.SendMessageAsync(client, JsonConvert.SerializeObject(new GetAuthKeyResponse(authKey)));
       }
     }
   }
